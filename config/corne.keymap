@@ -12,11 +12,28 @@
             bindings = <&kp TAB>, <&kp LS(TAB)>;
         };
 
-        ctab_stab: ctab_stab {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CTAB_STAB";
-            #binding-cells = <0>;
-            bindings = <&kp LC(TAB)>, <&kp LC(LS(TAB))>;
+        shiftl: shiftl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFTL";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <6 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 7 8 9>;
+        };
+
+        shiftr: shiftr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SHIFTR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
     };
 
@@ -25,10 +42,10 @@
 
         base {
             bindings = <
-&kp TILDE  &kp Q       &kp W       &kp E        &kp R        &kp T              &kp Y               &kp U         &kp I         &kp O       &kp P          &kp BACKSLASH
-&kp LCTRL  &mt LGUI A  &mt LALT S  &mt LSHFT D  &mt LCTRL F  &mt LESS_THAN G    &mt GREATER_THAN H  &mt RCTRL J   &mt RSHIFT K  &mt RALT L  &mt RGUI SEMI  &kp SINGLE_QUOTE
-&trans     &kp Z       &kp X       &kp C        &kp V        &kp B              &kp N               &kp M         &kp COMMA     &kp DOT     &kp FSLH       &trans
-                                   &kp DELETE   &lt 2 ENTER  &lt 4 SPACE        &lt 3 BACKSPACE     &lt 1 ESCAPE  &tab_stab
+&kp TILDE  &kp Q       &kp W       &kp E            &kp R         &kp T              &kp Y               &kp U        &kp I             &kp O       &kp P          &kp BACKSLASH
+&kp LCTRL  &mt LGUI A  &mt LALT S  &shiftl LSHFT D  &mt LCTRL F   &mt LESS_THAN G    &mt GREATER_THAN H  &mt RCTRL J  &shiftr RSHIFT K  &mt RALT L  &mt RGUI SEMI  &kp SINGLE_QUOTE
+&trans     &kp Z       &kp X       &kp C            &kp V         &kp B              &kp N               &kp M        &kp COMMA         &kp DOT     &kp FSLH       &trans
+                                   &tab_stab        &lt 2 ESCAPE  &lt 4 SPACE        &lt 3 BACKSPACE     &lt 1 ENTER  &key_repeat
             >;
         };
 
@@ -37,7 +54,7 @@
 &trans  &kp N0     &kp N1  &kp N2  &kp N3  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp EQUAL        &kp PLUS        &kp MINUS         &kp PERCENT   &trans
 &trans  &kp POUND  &kp N4  &kp N5  &kp N6  &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp CARET        &kp AMPERSAND   &kp ASTERISK      &kp COLON     &trans
 &trans  &kp PIPE   &kp N7  &kp N8  &kp N9  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp EXCLAMATION  &kp UNDERSCORE  &kp SINGLE_QUOTE  &kp QUESTION  &trans
-                           &trans  &trans  &kp SPACE               &kp BACKSPACE          &trans           &trans
+                           &trans  &trans  &trans                  &trans                 &trans           &trans
             >;
         };
 
