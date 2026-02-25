@@ -25,9 +25,9 @@
         base {
             bindings = <
 &kp TILDE  &kp Q       &kp W       &kp E        &kp R        &kp T              &kp Y               &kp U         &kp I         &kp O       &kp P          &kp BACKSLASH
-&kp LCTRL  &mt LGUI A  &mt LALT S  &mt LSHFT D  &mt LCTRL F  &mt LESS_THAN G    &mt GREATER_THAN H  &mt RCTRL J   &mt RSHIFT K  &mt RALT L  &mt RGUI SEMI  &kp DOUBLE_QUOTES
+&kp LCTRL  &mt LGUI A  &mt LALT S  &mt LSHFT D  &mt LCTRL F  &mt LESS_THAN G    &mt GREATER_THAN H  &mt RCTRL J   &mt RSHIFT K  &mt RALT L  &mt RGUI SEMI  &kp SINGLE_QUOTE
 &trans     &kp Z       &kp X       &kp C        &kp V        &kp B              &kp N               &kp M         &kp COMMA     &kp DOT     &kp FSLH       &trans
-                                   &ctab_stab   &lt 2 ENTER  &lt 4 BACKSPACE    &lt 3 SPACE         &lt 1 ESCAPE  &tab_stab
+                                   &kp DELETE   &lt 2 ENTER  &lt 4 SPACE        &lt 3 BACKSPACE     &lt 1 ESCAPE  &tab_stab
             >;
         };
 
@@ -36,7 +36,7 @@
 &trans  &kp N0     &kp N1  &kp N2  &kp N3  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp EQUAL        &kp PLUS        &kp MINUS         &kp PERCENT   &trans
 &trans  &kp POUND  &kp N4  &kp N5  &kp N6  &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp CARET        &kp AMPERSAND   &kp ASTERISK      &kp COLON     &trans
 &trans  &kp PIPE   &kp N7  &kp N8  &kp N9  &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp EXCLAMATION  &kp UNDERSCORE  &kp SINGLE_QUOTE  &kp QUESTION  &trans
-                           &trans  &trans  &kp BACKSPACE           &kp SPACE              &trans           &trans
+                           &trans  &trans  &kp SPACE               &kp BACKSPACE          &trans           &trans
             >;
         };
 
