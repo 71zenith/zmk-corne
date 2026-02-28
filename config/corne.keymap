@@ -115,10 +115,10 @@
 
         base {
             bindings = <
-&kp TILDE   &kp Q  &kp W        &kp E                &kp R         &kp T          &kp Y          &kp U        &kp I                 &kp O        &kp P     &kp BACKSLASH
-&kp ESCAPE  &kp A  &hml LALT S  &hml LEFT_CONTROL D  &hml LGUI F   &kp G          &kp H          &hmr RGUI J  &hmr RIGHT_CONTROL K  &hmr RALT L  &kp SEMI  &dquotes
-&trans      &kp Z  &kp X        &kp C                &kp V         &kp B          &kp N          &kp M        &kp COMMA             &kp DOT      &kp FSLH  &trans
-                                &tab_stab            &lt 2 DELETE  &lt 1 SPACE    &kp BACKSPACE  &lt 3 ENTER  &kp LEFT_SHIFT
+&kp TILDE  &kp Q  &kp W        &kp E                &kp R         &kp T          &kp Y          &kp U        &kp I                 &kp O        &kp P     &kp BACKSLASH
+&tog 5     &kp A  &hml LALT S  &hml LEFT_CONTROL D  &hml LGUI F   &kp G          &kp H          &hmr RGUI J  &hmr RIGHT_CONTROL K  &hmr RALT L  &kp SEMI  &dquotes
+&trans     &kp Z  &kp X        &kp C                &kp V         &kp B          &kp N          &kp M        &kp COMMA             &kp DOT      &kp FSLH  &trans
+                               &tab_stab            &lt 2 ESCAPE  &lt 1 SPACE    &kp BACKSPACE  &lt 3 ENTER  &kp LEFT_SHIFT
             >;
         };
 
@@ -133,7 +133,7 @@
 
         sys {
             bindings = <
-&trans      &trans             &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &kp LG(N)  &trans       &trans    &kp PRINTSCREEN  &kp LC(PRINTSCREEN)  &kp LA(PRINTSCREEN)  &trans   &trans
+&trans      &trans             &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(N)  &trans       &trans    &kp PRINTSCREEN  &kp LC(PRINTSCREEN)  &kp LA(PRINTSCREEN)  &trans   &trans
 &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP       &kp LG(A)             &kp LG(S)  &kp LG(D)    &kp LEFT  &kp DOWN         &kp UP               &kp RIGHT            &trans   &trans
 &kp F1      &kp F2             &kp F3                &kp F4                &kp F5     &kp F6       &kp F7    &kp F8           &kp F9               &kp F10              &kp F11  &kp F12
                                                      &trans                &trans     &trans       &trans    &trans           &trans
@@ -142,8 +142,8 @@
 
         wm {
             bindings = <
-&trans  &kp LG(Q)       &kp LG(N1)  &kp LG(N2)  &kp LG(N3)      &kp LG(U)           &kp LG(R)  &kp LG(T)  &kp LG(MINUS)  &kp LG(EQUAL)  &kp LG(LS(C))  &trans
-&trans  &kp LG(COMMA)   &kp LG(N4)  &kp LG(N5)  &kp LG(N6)      &kp LG(I)           &kp LG(H)  &kp LG(J)  &kp LG(K)      &kp LG(L)      &kp LG(LS(S))  &trans
+&trans  &kp LG(Q)       &kp LG(N1)  &kp LG(N2)  &kp LG(N3)      &kp LG(I)           &kp LG(R)  &kp LG(T)  &kp LG(MINUS)  &kp LG(EQUAL)  &kp LG(LS(C))  &trans
+&trans  &kp LG(COMMA)   &kp LG(N4)  &kp LG(N5)  &kp LG(N6)      &kp LG(U)           &kp LG(H)  &kp LG(J)  &kp LG(K)      &kp LG(L)      &kp LG(LS(S))  &trans
 &trans  &kp LG(PERIOD)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)      &trans              &trans     &trans     &trans         &trans         &trans         &trans
                                     &trans      &kp LEFT_SHIFT  &kp LEFT_CONTROL    &trans     &trans     &trans
             >;
@@ -155,6 +155,15 @@
 &trans  &msc SCRL_UP  &msc SCRL_DOWN  &mkp LCLK  &mkp RCLK  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans        &trans          &trans     &trans     &trans    &trans          &trans          &trans        &trans           &trans  &trans
                                       &trans     &trans     &trans    &trans          &trans          &trans
+            >;
+        };
+
+        game {
+            bindings = <
+&kp TILDE  &kp Q  &kp W  &kp E    &kp R       &kp T        &kp Y          &kp U      &kp I           &kp O    &kp P     &kp BACKSLASH
+&tog 0     &kp A  &kp S  &kp D    &kp F       &kp G        &kp H          &kp J      &kp K           &kp L    &kp SEMI  &kp SQT
+&trans     &kp Z  &kp X  &kp C    &kp V       &kp B        &kp N          &kp M      &kp COMMA       &kp DOT  &kp FSLH  &trans
+                         &kp TAB  &kp ESCAPE  &kp SPACE    &kp BACKSPACE  &kp ENTER  &kp LEFT_SHIFT
             >;
         };
     };
