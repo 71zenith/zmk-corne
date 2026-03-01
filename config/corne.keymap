@@ -116,7 +116,7 @@
         base {
             bindings = <
 &kp TILDE  &kp Q  &kp W        &kp E                &kp R         &kp T          &kp Y          &kp U        &kp I                 &kp O        &kp P     &kp BACKSLASH
-&tog 5     &kp A  &hml LALT S  &hml LEFT_CONTROL D  &hml LGUI F   &kp G          &kp H          &hmr RGUI J  &hmr RIGHT_CONTROL K  &hmr RALT L  &kp SEMI  &dquotes
+&to 5      &kp A  &hml LALT S  &hml LEFT_CONTROL D  &hml LGUI F   &kp G          &kp H          &hmr RGUI J  &hmr RIGHT_CONTROL K  &hmr RALT L  &kp SEMI  &dquotes
 &trans     &kp Z  &kp X        &kp C                &kp V         &kp B          &kp N          &kp M        &kp COMMA             &kp DOT      &kp FSLH  &trans
                                &tab_stab            &lt 2 ESCAPE  &lt 1 SPACE    &kp BACKSPACE  &lt 3 ENTER  &kp LEFT_SHIFT
             >;
@@ -160,10 +160,10 @@
 
         game {
             bindings = <
-&kp TILDE  &kp Q  &kp W  &kp E    &kp R       &kp T        &kp Y          &kp U      &kp I           &kp O    &kp P     &kp BACKSLASH
-&tog 5     &kp A  &kp S  &kp D    &kp F       &kp G        &kp H          &kp J      &kp K           &kp L    &kp SEMI  &kp SQT
-&trans     &kp Z  &kp X  &kp C    &kp V       &kp B        &kp N          &kp M      &kp COMMA       &kp DOT  &kp FSLH  &trans
-                         &kp TAB  &kp ESCAPE  &kp SPACE    &kp BACKSPACE  &kp ENTER  &kp LEFT_SHIFT
+&kp TILDE  &kp Q  &kp W  &kp E    &kp R         &kp T          &kp Y          &kp U        &kp I           &kp O    &kp P     &kp BACKSLASH
+&to 0      &kp A  &kp S  &kp D    &kp F         &kp G          &kp H          &kp J        &kp K           &kp L    &kp SEMI  &kp SQT
+&trans     &kp Z  &kp X  &kp C    &kp V         &kp B          &kp N          &kp M        &kp COMMA       &kp DOT  &kp FSLH  &trans
+                         &kp TAB  &lt 2 ESCAPE  &lt 1 SPACE    &kp BACKSPACE  &lt 3 ENTER  &kp LEFT_SHIFT
             >;
         };
     };
