@@ -83,25 +83,29 @@
         compatible = "zmk,combos";
 
         launcher {
-            bindings = <&kp LG(SPACE)>;
+            bindings = <&kp LG(LS(F23))>;
             key-positions = <38 39>;
             require-prior-idle-ms = <150>;
             timeout-ms = <200>;
+            layers = <0>;
         };
 
         curly {
             bindings = <&curly>;
             key-positions = <17 18>;
+            layers = <2>;
         };
 
         lispy {
             bindings = <&lispy>;
             key-positions = <5 5 6>;
+            layers = <2>;
         };
 
         blocky {
             bindings = <&blocky>;
             key-positions = <29 30>;
+            layers = <2>;
         };
     };
 
@@ -148,7 +152,7 @@
             bindings = <
 &trans  &kp LG(Q)       &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(I)           &kp LG(R)          &kp LG(T)  &kp LG(MINUS)  &kp LG(EQUAL)  &kp LG(LS(C))  &trans
 &trans  &kp LG(COMMA)   &kp LG(N4)  &kp LG(N5)  &kp LG(N6)  &kp LG(U)           &kp LG(H)          &kp LG(J)  &kp LG(K)      &kp LG(L)      &kp LG(LS(S))  &trans
-&trans  &kp LG(PERIOD)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &trans              &trans             &trans     &trans         &trans         &trans         &trans
+&trans  &kp LG(PERIOD)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &trans              &trans             &kp LG(F)  &trans         &trans         &trans         &trans
                                     &trans      &trans      &kp LEFT_CONTROL    &kp RIGHT_CONTROL  &trans     &trans
             >;
         };
