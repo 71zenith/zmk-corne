@@ -1,3 +1,3 @@
 # zmk config for wireless corne v4 with nice nanos
 
-![config](view.svg)
+![keymap](https://github.com/71zenith/zmk-config/releases/latest/download/corne.svg)

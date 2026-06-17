@@ -1,31 +1,37 @@
 name: Build ZMK firmware
 on: [push, workflow_dispatch]
-
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.23.0
+    with:
+      output_folder: keymap-drawer
+      destination: artifact
   release:
-    needs: build
+    needs: [build, draw]
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Download firmware
         uses: actions/download-artifact@v4
         with:
           name: firmware
           path: firmware/
-
+      - name: Download keymap SVG
+        uses: actions/download-artifact@v4
+        with:
+          name: drawing
+          path: keymap-drawer/
       - name: Get metadata
         id: meta
         run: |
           IST=$(TZ='Asia/Kolkata' date +'%Y%m%d-%H%M')
           echo "tag=$IST" >> $GITHUB_OUTPUT
           echo "msg=$(git log -1 --pretty=%s)" >> $GITHUB_OUTPUT
-
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
@@ -35,4 +41,5 @@ jobs:
           files: |
             firmware/corne_left.uf2
             firmware/corne_right.uf2
+            keymap-drawer/corne.svg
           make_latest: true
