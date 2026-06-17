@@ -24,7 +24,7 @@ jobs:
       - name: Download keymap SVG
         uses: actions/download-artifact@v4
         with:
-          name: drawing
+          name: drawings
           path: keymap-drawer/
       - name: Get metadata
         id: meta
