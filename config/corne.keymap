@@ -50,32 +50,11 @@
     };
 
     macros {
-        curly: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
-            label = "NEW_MACRO";
-        };
-
-        blocky: blocky {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
-            label = "BLOCKY";
-        };
-
         dquote: dquote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
             label = "DQUOTE";
-        };
-
-        lispy: lispy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
-            label = "LISPY";
         };
     };
 
@@ -89,24 +68,6 @@
             timeout-ms = <200>;
             layers = <0>;
         };
-
-        curly {
-            bindings = <&curly>;
-            key-positions = <17 18>;
-            layers = <2>;
-        };
-
-        lispy {
-            bindings = <&lispy>;
-            key-positions = <5 5 6>;
-            layers = <2>;
-        };
-
-        blocky {
-            bindings = <&blocky>;
-            key-positions = <29 30>;
-            layers = <2>;
-        };
     };
 
     keymap {
@@ -116,17 +77,17 @@
             bindings = <
 &kp TILDE   &kp Q  &kp W        &kp E                &kp R        &kp T          &kp Y          &kp U        &kp I                 &kp O        &kp P     &kp BACKSLASH
 &kp ESCAPE  &kp A  &hml LALT S  &hml LEFT_CONTROL D  &hml LGUI F  &kp G          &kp H          &hmr RGUI J  &hmr RIGHT_CONTROL K  &hmr RALT L  &kp SEMI  &dquotes
-&trans      &kp Z  &kp X        &kp C                &kp V        &kp B          &kp N          &kp M        &kp COMMA             &kp DOT      &kp FSLH  &game_toggle 1
+&kp ENTER   &kp Z  &kp X        &kp C                &kp V        &kp B          &kp N          &kp M        &kp COMMA             &kp DOT      &kp FSLH  &game_toggle 1
                                 &kp LSHIFT           &lt 4 ENTER  &lt 2 SPACE    &kp BACKSPACE  &lt 3 TAB    &kp RSHIFT
             >;
         };
 
         game {
             bindings = <
-&trans     &trans  &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &kp S   &kp D   &kp F             &trans       &trans  &kp J   &kp K   &kp L   &trans  &trans
-&kp ENTER  &trans  &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans  &kp LEFT_CONTROL  &kp SPACE    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp S   &kp D   &kp F             &trans       &trans  &kp J   &kp K   &kp L   &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &kp LEFT_CONTROL  &kp SPACE    &trans  &trans  &trans
             >;
         };
 
@@ -141,9 +102,9 @@
 
         sys {
             bindings = <
-&trans      &trans             &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(N)  &trans       &trans    &kp PRINTSCREEN  &kp LC(PRINTSCREEN)  &kp LA(PRINTSCREEN)  &trans   &trans
-&kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP       &kp LG(A)             &kp LG(S)  &kp LG(D)    &kp LEFT  &kp DOWN         &kp UP               &kp RIGHT            &trans   &trans
-&kp F1      &kp F2             &kp F3                &kp F4                &kp F5     &kp F6       &kp F7    &kp F8           &kp F9               &kp F10              &kp F11  &kp F12
+&trans      &kp INSERT         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(N)  &trans       &trans    &kp PRINTSCREEN  &kp LC(PRINTSCREEN)  &kp LA(PRINTSCREEN)  &kp PAGE_UP    &trans
+&kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP       &kp LG(A)             &kp LG(S)  &kp LG(D)    &kp LEFT  &kp DOWN         &kp UP               &kp RIGHT            &kp PAGE_DOWN  &trans
+&kp F1      &kp F2             &kp F3                &kp F4                &kp F5     &kp F6       &kp F7    &kp F8           &kp F9               &kp F10              &kp F11        &kp F12
                                                      &trans                &trans     &trans       &trans    &trans           &trans
             >;
         };
